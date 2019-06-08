@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>First Javascript Page</title>
+		<script> 
+			window.onload = function (){
+				//alert("Welcome to Javascript");
+				document.getElementById("btn1").onclick = function (){
+					console.log(Date());
+					/*funOne();
+					funTwo();
+					funThree();		
+
+					funFour(10, 20, add);
+					funFour(10, 20, subtract);
+					funFour(10, 20, multiply);
+					funFour(10, 20, divide);
+					*/
+					var arrOne = [21,43,2,32,55,65,43,64,23,73,57];
+					/*console.log("Regular for");
+					for(var i=0;i<arrOne.length;i++){
+						console.log(i+" "+arrOne[i]);
+					}*/
+					/*console.log("for in");
+					for (let key in arrOne){
+						console.log(key+" "+arrOne[key]);
+					}*/
+					
+					console.log("for of");
+					for (let val of arrOne){
+						console.log(val);
+					}
+					
+					console.log(arrOne);
+					console.log(arrOne.sort());
+				}
+				//named function
+				function funOne(param1){
+					console.log("Named function");
+					
+					switch(param1)
+					{
+						case 1:
+					}
+				}
+				
+				//Anonymous function
+				funTwo = function (param1, param2){
+					console.log("Anonymous function");
+				}
+				
+				//arrow function
+				funThree = (a,b)=>{
+					console.log("Arrow function");
+				}
+				
+				funFour = function (num1, num2, genFun){
+					console.log(genFun(num1, num2));
+				}
+				
+				function add(num1, num2){
+					return num1 + num2;
+				}
+				
+				function subtract(num1, num2){
+					return num1 - num2;
+				}
+				
+				function multiply(num1, num2){
+					return num1 * num2;
+				}
+				
+				function divide(num1, num2){
+					return num1 / num2;
+				}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<!--<p id="para1">Click below button to know the date and time in India</p>
+		<button type="button" onclick="document.getElementById('para2').innerHTML = Date()">Click Me</button>
+		<p id="para2">On clicking the button, this will be replaced by date and time</p>-->
+		<!--<h2>Javascript can change attribute value</>
+		<hr/>
+		<button type="button" onclick="document.getElementById('bulb').src='bulb_off.png'">Turn off light</button>
+		
+		<img id="bulb" src="E:\Web\Javascript\bulb_on.PNG" style="80px"/>
+		
+		<button type="button" onclick="document.getElementById('bulb').src='bulb_on.png'">Turn on light</button>
+		-->
+		<button type="button" id="btn1">Click Me</button>
+	</body>
+</html>
